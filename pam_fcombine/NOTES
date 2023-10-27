@@ -8,7 +8,7 @@ VSFTPD can go stick it's appendage in a blender.  This bug took *DAYS*
 to debug.  Basically VSFTP does two things:
 
 1. It uses CLONE_NEWNET on some versions (patched in SL6.2)
-
+priyanshu tawde
  VSFTPD calls clone() with the CLONE_NEWNET param, meaning any network
  stuff we set up will fail.  This parameter basically tells clone()
  to set up a new networking namespace.  It's used for security reasons.
